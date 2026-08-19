@@ -5,6 +5,7 @@ import { Badge, type BadgeVariant } from './Badge'
 import { PriceTag } from './PriceTag'
 import { ColorSwatchGroup } from './ColorSwatch'
 import { Button } from './Button'
+import { useCart } from '../../context/CartContext'
 import { cn } from '../../lib/cn'
 
 interface ProductCardProps {
@@ -50,6 +51,18 @@ export function ProductCard({
   const [saved, setSaved] = useState(false)
   const isList = layout === 'list'
   const href = `/produtos/${id}`
+  const { addItem, openDrawer } = useCart()
+
+  const handleAddToCart = () => {
+    addItem({
+      productId: id,
+      name,
+      price,
+      imageGradient,
+      variantLabel: selectedColor || undefined,
+    })
+    openDrawer()
+  }
 
   return (
     <article
@@ -126,7 +139,7 @@ export function ProductCard({
         )}
 
         <div className={cn('mt-auto flex flex-col gap-2 pt-1', isList && 'mt-0 w-full shrink-0 pt-3 sm:w-44 sm:pt-0')}>
-          <Button size="sm" className="w-full">
+          <Button size="sm" className="w-full" onClick={handleAddToCart}>
             Comprar
           </Button>
           {showWhatsapp && (
