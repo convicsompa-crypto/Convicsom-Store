@@ -8,10 +8,11 @@ interface CheckoutConfirmationProps {
   orderNumber: string
   total: number
   deliveryMethod: 'retirada' | 'entrega'
+  storeCity?: string
   email: string
 }
 
-export function CheckoutConfirmation({ orderNumber, total, deliveryMethod, email }: CheckoutConfirmationProps) {
+export function CheckoutConfirmation({ orderNumber, total, deliveryMethod, storeCity, email }: CheckoutConfirmationProps) {
   return (
     <div className="mx-auto flex max-w-lg flex-col items-center gap-4 py-16 text-center">
       <div className="flex size-14 items-center justify-center rounded-full bg-success-50 text-success-700">
@@ -34,7 +35,7 @@ export function CheckoutConfirmation({ orderNumber, total, deliveryMethod, email
         <div className="flex items-center justify-between pt-4">
           <span className="text-sm text-neutral-500">Entrega</span>
           <span className="text-sm font-medium text-neutral-900">
-            {deliveryMethod === 'retirada' ? 'Retirada na loja — Pouso Alegre (MG)' : 'Entrega no endereço informado'}
+            {deliveryMethod === 'retirada' ? `Retirada na loja — ${storeCity} (MG)` : 'Entrega no endereço informado'}
           </span>
         </div>
       </div>
