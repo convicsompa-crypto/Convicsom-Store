@@ -1,4 +1,5 @@
 import { CreditCard, Headset, MapPin, ShieldCheck } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { Container } from '../ui/Container'
 import { Logo } from '../ui/Logo'
 
@@ -47,21 +48,29 @@ export function Footer() {
           <p className="mt-4 text-sm text-neutral-400">
             Instrumentos musicais e áudio profissional em Pouso Alegre (MG).
           </p>
-          <a href="#projetos" className="mt-4 inline-block text-sm font-semibold text-accent-500 hover:underline">
+          <Link to="/#projetos" className="mt-4 inline-block text-sm font-semibold text-accent-500 hover:underline">
             Sou empresa/igreja →
-          </a>
+          </Link>
         </div>
         {columns.map((col) => (
           <div key={col.title}>
             <p className="text-sm font-semibold text-white">{col.title}</p>
             <ul className="mt-3 flex flex-col gap-2">
-              {col.links.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-neutral-400 hover:text-white">
-                    {link}
-                  </a>
-                </li>
-              ))}
+              {col.links.map((link) =>
+                col.title === 'Categorias' ? (
+                  <li key={link}>
+                    <Link to="/produtos" className="text-sm text-neutral-400 hover:text-white">
+                      {link}
+                    </Link>
+                  </li>
+                ) : (
+                  <li key={link}>
+                    <a href="#" className="text-sm text-neutral-400 hover:text-white">
+                      {link}
+                    </a>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
         ))}

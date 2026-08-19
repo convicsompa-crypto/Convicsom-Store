@@ -1,0 +1,159 @@
+[
+  {
+    "id": "guitarra-stratocaster-hss",
+    "name": "Guitarra Stratocaster HSS",
+    "category": "Instrumentos",
+    "subcategory": "Cordas",
+    "brand": "Tagima",
+    "price": 4299,
+    "originalPrice": 4799,
+    "installments": { "count": 12, "value": 358.25 },
+    "badges": ["new"],
+    "colors": [
+      { "name": "Sunburst", "hex": "#8a4b1f" },
+      { "name": "Preto", "hex": "#1a1a1a" },
+      { "name": "Branco", "hex": "#f5f5f0" }
+    ],
+    "imageGradient": "from-amber-100 to-amber-200",
+    "numStrings": 6
+  },
+  {
+    "id": "baixo-jazz-bass-4-cordas",
+    "name": "Baixo Jazz Bass 4 Cordas",
+    "category": "Instrumentos",
+    "subcategory": "Cordas",
+    "brand": "Ibanez",
+    "price": 3199,
+    "installments": { "count": 12, "value": 266.58 },
+    "colors": [
+      { "name": "Sunburst", "hex": "#8a4b1f" },
+      { "name": "Preto", "hex": "#1a1a1a" }
+    ],
+    "imageGradient": "from-orange-100 to-orange-300",
+    "numStrings": 4
+  },
+  {
+    "id": "violao-folk-aco",
+    "name": "Violão Folk Aço",
+    "category": "Instrumentos",
+    "subcategory": "Cordas",
+    "brand": "Yamaha",
+    "price": 1590,
+    "originalPrice": 1890,
+    "installments": { "count": 10, "value": 159 },
+    "badges": ["sale"],
+    "imageGradient": "from-yellow-100 to-yellow-200",
+    "numStrings": 6
+  },
+  {
+    "id": "ukulele-concert",
+    "name": "Ukulele Concert",
+    "category": "Instrumentos",
+    "subcategory": "Cordas",
+    "brand": "Yamaha",
+    "price": 490,
+    "installments": { "count": 6, "value": 81.67 },
+    "badges": ["new"],
+    "imageGradient": "from-lime-100 to-lime-200",
+    "numStrings": 4
+  },
+  {
+    "id": "teclado-arranjador-61-teclas",
+    "name": "Teclado Arranjador 61 Teclas",
+    "category": "Instrumentos",
+    "subcategory": "Teclas",
+    "brand": "Yamaha",
+    "price": 2890,
+    "installments": { "count": 12, "value": 240.83 },
+    "imageGradient": "from-neutral-200 to-neutral-300"
+  },
+  {
+    "id": "cajon-acustico-premium",
+    "name": "Cajón Acústico Premium",
+    "category": "Instrumentos",
+    "subcategory": "Percussão",
+    "brand": "Meinl",
+    "price": 890,
+    "installments": { "count": 8, "value": 111.25 },
+    "imageGradient": "from-orange-100 to-orange-200"
+  },
+  {
+    "id": "trompete-bb-laqueado",
+    "name": "Trompete Bb Laqueado",
+    "category": "Instrumentos",
+    "subcategory": "Sopros",
+    "brand": "Yamaha",
+    "price": 3450,
+    "installments": { "count": 12, "value": 287.5 },
+    "badges": ["lastUnits"],
+    "imageGradient": "from-amber-200 to-amber-400"
+  },
+  {
+    "id": "mesa-de-som-digital-16-canais",
+    "name": "Mesa de Som Digital 16 Canais",
+    "category": "Áudio Profissional",
+    "subcategory": "Mesas de Som",
+    "brand": "Behringer",
+    "price": 6890,
+    "installments": { "count": 12, "value": 574.16 },
+    "badges": ["sale"],
+    "showWhatsapp": true,
+    "imageGradient": "from-slate-200 to-slate-300",
+    "connectivity": ["XLR", "USB", "Bluetooth"],
+    "use": ["Igreja", "Estúdio", "Palco"]
+  },
+  {
+    "id": "caixa-ativa-15-400w",
+    "name": "Caixa Ativa 15\" 400W",
+    "category": "Áudio Profissional",
+    "subcategory": "Caixas Ativas",
+    "brand": "JBL",
+    "price": 2350,
+    "installments": { "count": 10, "value": 235 },
+    "badges": ["lastUnits"],
+    "showWhatsapp": true,
+    "imageGradient": "from-neutral-300 to-neutral-400",
+    "powerWatts": 400,
+    "connectivity": ["XLR", "Bluetooth"],
+    "use": ["Igreja", "Palco", "Casa"]
+  },
+  {
+    "id": "caixa-ativa-12-250w",
+    "name": "Caixa Ativa 12\" 250W",
+    "category": "Áudio Profissional",
+    "subcategory": "Caixas Ativas",
+    "brand": "Mackie",
+    "price": 1790,
+    "installments": { "count": 10, "value": 179 },
+    "showWhatsapp": true,
+    "imageGradient": "from-neutral-200 to-neutral-400",
+    "powerWatts": 250,
+    "connectivity": ["Bluetooth", "TRS"],
+    "use": ["Casa", "Estúdio"]
+  },
+  {
+    "id": "microfone-dinamico-vocal",
+    "name": "Microfone Dinâmico Vocal",
+    "category": "Áudio Profissional",
+    "subcategory": "Microfones",
+    "brand": "Shure",
+    "price": 890,
+    "installments": { "count": 8, "value": 111.25 },
+    "showWhatsapp": true,
+    "imageGradient": "from-zinc-300 to-zinc-400",
+    "connectivity": ["XLR"],
+    "use": ["Igreja", "Estúdio", "Palco"]
+  },
+  {
+    "id": "cabo-xlr-balanceado-5m",
+    "name": "Cabo XLR Balanceado 5m",
+    "category": "Áudio Profissional",
+    "subcategory": "Cabeamento",
+    "brand": "Behringer",
+    "price": 79,
+    "installments": { "count": 3, "value": 26.33 },
+    "imageGradient": "from-stone-200 to-stone-300",
+    "connectivity": ["XLR"],
+    "use": ["Igreja", "Estúdio", "Palco", "Casa"]
+  }
+]

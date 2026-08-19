@@ -19,10 +19,10 @@ const promoMessages = [
 ]
 
 const categoryLinks = [
-  { label: 'Instrumentos', href: '#' },
-  { label: 'Áudio Profissional', href: '#' },
-  { label: 'Marcas', href: '#' },
-  { label: 'Ofertas', href: '#' },
+  { label: 'Instrumentos', to: '/produtos' },
+  { label: 'Áudio Profissional', to: '/produtos' },
+  { label: 'Marcas', to: '/produtos' },
+  { label: 'Ofertas', to: '/produtos' },
 ]
 
 export function Header() {
@@ -115,21 +115,21 @@ export function Header() {
         <Container className="flex flex-col gap-1 py-2 sm:h-12 sm:flex-row sm:items-center sm:justify-between sm:py-0">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-6">
             {categoryLinks.map((l) => (
-              <a
+              <Link
                 key={l.label}
-                href={l.href}
+                to={l.to}
                 className="rounded-md px-2 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand-700 sm:px-0 sm:py-0"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
-          <a
-            href="#projetos"
+          <Link
+            to="/#projetos"
             className="mt-1 inline-flex items-center gap-1.5 rounded-md bg-brand-50 px-3 py-2.5 text-sm font-semibold text-brand-700 hover:bg-brand-100 sm:mt-0 sm:py-1.5"
           >
             Projetos para Igrejas e Empresas
-          </a>
+          </Link>
         </Container>
       </nav>
     </header>
