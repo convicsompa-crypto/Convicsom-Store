@@ -59,6 +59,7 @@ export function CheckoutPage() {
 
   const [deliveryMethod, setDeliveryMethod] = useState<DeliveryMethod>('entrega')
   const [selectedStoreId, setSelectedStoreId] = useState(stores[0].id)
+  const [storePickerOpen, setStorePickerOpen] = useState(true)
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>('cartao')
   const [installments, setInstallments] = useState(1)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -228,7 +229,7 @@ export function CheckoutPage() {
                   <Input label="Cidade" value={city} onChange={(e) => setCity(e.target.value)} required />
                   <Input label="UF" value={state} onChange={(e) => setState(e.target.value)} required maxLength={2} />
                 </div>
-              ) : (
+              ) : storePickerOpen ? (
                 <div className="mt-4 flex flex-col gap-2" role="radiogroup" aria-label="Loja para retirada">
                   {stores.map((s) => {
                     const selected = s.id === selectedStoreId
@@ -238,7 +239,10 @@ export function CheckoutPage() {
                         type="button"
                         role="radio"
                         aria-checked={selected}
-                        onClick={() => setSelectedStoreId(s.id)}
+                        onClick={() => {
+                          setSelectedStoreId(s.id)
+                          setStorePickerOpen(false)
+                        }}
                         className={cn(
                           'flex items-start gap-3 rounded-lg border p-4 text-left transition-colors',
                           selected ? 'border-brand-500 bg-brand-50' : 'border-neutral-300 hover:border-neutral-400',
@@ -248,6 +252,11 @@ export function CheckoutPage() {
                         <span>
                           <span className="block text-sm font-semibold text-neutral-900">{s.city}</span>
                           <span className="block text-xs text-neutral-500">{s.address}</span>
+                          {(s.phone || s.whatsapp) && (
+                            <span className="mt-0.5 block text-xs text-neutral-400">
+                              {[s.phone, s.whatsapp && `WhatsApp ${s.whatsapp}`].filter(Boolean).join(' · ')}
+                            </span>
+                          )}
                         </span>
                       </button>
                     )
@@ -255,6 +264,30 @@ export function CheckoutPage() {
                   <p className="mt-1 text-xs text-neutral-400">
                     Retirada gratuita. Avisaremos por e-mail quando o pedido estiver pronto.
                   </p>
+                </div>
+              ) : (
+                <div className="mt-4 flex items-start justify-between gap-3 rounded-lg border border-brand-500 bg-brand-50 p-4">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 size-5 shrink-0 text-brand-600" aria-hidden="true" />
+                    <span>
+                      <span className="block text-sm font-bold text-neutral-900">{selectedStore.city}</span>
+                      <span className="block text-xs text-neutral-500">{selectedStore.address}</span>
+                      {(selectedStore.phone || selectedStore.whatsapp) && (
+                        <span className="mt-0.5 block text-xs text-neutral-400">
+                          {[selectedStore.phone, selectedStore.whatsapp && `WhatsApp ${selectedStore.whatsapp}`]
+                            .filter(Boolean)
+                            .join(' · ')}
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setStorePickerOpen(true)}
+                    className="shrink-0 text-xs font-semibold text-brand-700 hover:underline"
+                  >
+                    Trocar loja
+                  </button>
                 </div>
               )}
             </section>
