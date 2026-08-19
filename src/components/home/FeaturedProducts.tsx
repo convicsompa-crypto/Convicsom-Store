@@ -17,6 +17,7 @@ export function FeaturedProducts() {
           {featuredProducts.map((p) => (
             <ProductCard
               key={p.id}
+              id={p.id}
               name={p.name}
               category={p.category}
               price={p.price}

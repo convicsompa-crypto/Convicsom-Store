@@ -4,6 +4,22 @@ export type ProductCategory = 'Instrumentos' | 'Áudio Profissional'
 
 export type UseCase = 'Igreja' | 'Estúdio' | 'Palco' | 'Casa'
 
+export interface SpecGroup {
+  category: string
+  items: { label: string; value: string }[]
+}
+
+export interface ProductHighlight {
+  title: string
+  description: string
+  imageGradient: string
+}
+
+export interface ProductVariation {
+  name: string
+  options: string[]
+}
+
 export interface Product {
   id: string
   name: string
@@ -23,4 +39,13 @@ export interface Product {
   powerWatts?: number
   connectivity?: string[]
   use?: UseCase[]
+
+  /** Campos usados na página de produto (PDP) */
+  images?: string[]
+  summary?: string
+  characteristics?: string[]
+  specs?: SpecGroup[]
+  highlights?: ProductHighlight[]
+  downloads?: { label: string }[]
+  variations?: ProductVariation[]
 }
