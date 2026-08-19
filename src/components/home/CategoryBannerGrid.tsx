@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Container } from '../ui/Container'
 
 interface CategoryBanner {
@@ -31,9 +32,9 @@ export function CategoryBannerGrid() {
         <h2 className="font-display text-2xl font-bold text-neutral-900 sm:text-3xl">Compre por categoria</h2>
         <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {categories.map((c) => (
-            <a
+            <Link
               key={c.title}
-              href="#"
+              to="/produtos"
               className={`group relative flex h-56 flex-col justify-end overflow-hidden rounded-xl bg-gradient-to-br p-6 ${c.gradient}`}
             >
               <h3 className="font-display text-xl font-bold text-neutral-900">{c.title}</h3>
@@ -41,7 +42,7 @@ export function CategoryBannerGrid() {
               <span className="mt-3 text-sm font-semibold text-brand-800 underline-offset-2 group-hover:underline">
                 Ver produtos →
               </span>
-            </a>
+            </Link>
           ))}
         </div>
       </Container>

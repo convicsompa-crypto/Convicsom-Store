@@ -17,6 +17,13 @@ interface ProductCardProps {
   showWhatsapp?: boolean
   imageGradient?: string
   className?: string
+  /** 'grid' (padrão, coluna) ou 'list' (linha, imagem à esquerda) */
+  layout?: 'grid' | 'list'
+  /** Quando true, mostra checkbox de seleção para comparação no lugar do favoritar */
+  compareMode?: boolean
+  compareSelected?: boolean
+  onToggleCompare?: () => void
+  compareDisabled?: boolean
 }
 
 export function ProductCard({
@@ -30,19 +37,32 @@ export function ProductCard({
   showWhatsapp = false,
   imageGradient = 'from-neutral-200 to-neutral-300',
   className,
+  layout = 'grid',
+  compareMode = false,
+  compareSelected = false,
+  onToggleCompare,
+  compareDisabled = false,
 }: ProductCardProps) {
   const [selectedColor, setSelectedColor] = useState(colors?.[0]?.name ?? '')
   const [saved, setSaved] = useState(false)
+  const isList = layout === 'list'
 
   return (
     <article
       className={cn(
-        'group flex flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white',
+        'group flex overflow-hidden rounded-xl border border-neutral-200 bg-white',
         'transition-shadow hover:shadow-lg',
+        isList ? 'flex-row' : 'flex-col',
         className,
       )}
     >
-      <div className={cn('relative aspect-square bg-gradient-to-br', imageGradient)}>
+      <div
+        className={cn(
+          'relative shrink-0 bg-gradient-to-br',
+          isList ? 'aspect-square w-32 sm:w-48' : 'aspect-square w-full',
+          imageGradient,
+        )}
+      >
         {badges.length > 0 && (
           <div className="absolute left-3 top-3 flex flex-col gap-1.5">
             {badges.map((b) => (
@@ -50,30 +70,56 @@ export function ProductCard({
             ))}
           </div>
         )}
-        <button
-          type="button"
-          onClick={() => setSaved((s) => !s)}
-          aria-pressed={saved}
-          aria-label={saved ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-          className="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 text-neutral-700 shadow-sm hover:bg-white"
-        >
-          <Heart className={cn('size-4', saved && 'fill-danger-500 text-danger-500')} aria-hidden="true" />
-        </button>
+        {compareMode ? (
+          <label
+            className={cn(
+              'absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 shadow-sm',
+              compareDisabled && !compareSelected && 'opacity-50',
+            )}
+          >
+            <span className="sr-only">Selecionar "{name}" para comparar</span>
+            <input
+              type="checkbox"
+              checked={compareSelected}
+              disabled={compareDisabled && !compareSelected}
+              onChange={onToggleCompare}
+              className="size-4 accent-brand-600"
+            />
+          </label>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setSaved((s) => !s)}
+            aria-pressed={saved}
+            aria-label={saved ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+            className="absolute right-3 top-3 flex size-9 items-center justify-center rounded-full bg-white/90 text-neutral-700 shadow-sm hover:bg-white"
+          >
+            <Heart className={cn('size-4', saved && 'fill-danger-500 text-danger-500')} aria-hidden="true" />
+          </button>
+        )}
       </div>
 
-      <div className="flex flex-1 flex-col gap-3 p-4">
-        <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-neutral-500">{category}</p>
-          <h3 className="font-display text-base font-semibold text-neutral-900">{name}</h3>
+      <div className={cn('flex flex-1 flex-col gap-3 p-4', isList && 'sm:flex-row sm:items-center sm:justify-between')}>
+        <div className={cn('flex flex-1 flex-col gap-3', isList && 'sm:pr-4')}>
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wide text-neutral-500">{category}</p>
+            <h3 className="font-display text-base font-semibold text-neutral-900">{name}</h3>
+          </div>
+
+          {colors && colors.length > 0 && (
+            <ColorSwatchGroup options={colors} value={selectedColor} onChange={setSelectedColor} />
+          )}
+
+          {!isList && <PriceTag price={price} originalPrice={originalPrice} installments={installments} size="sm" />}
         </div>
 
-        {colors && colors.length > 0 && (
-          <ColorSwatchGroup options={colors} value={selectedColor} onChange={setSelectedColor} />
+        {isList && (
+          <div className="shrink-0">
+            <PriceTag price={price} originalPrice={originalPrice} installments={installments} size="sm" />
+          </div>
         )}
 
-        <PriceTag price={price} originalPrice={originalPrice} installments={installments} size="sm" />
-
-        <div className="mt-auto flex flex-col gap-2 pt-1">
+        <div className={cn('mt-auto flex flex-col gap-2 pt-1', isList && 'mt-0 w-full shrink-0 pt-3 sm:w-44 sm:pt-0')}>
           <Button size="sm" className="w-full">
             Comprar
           </Button>
