@@ -112,6 +112,7 @@ export function PLPPage() {
                 {sorted.map((p) => (
                   <ProductCard
                     key={p.id}
+                    id={p.id}
                     layout={viewMode}
                     name={p.name}
                     category={p.category}

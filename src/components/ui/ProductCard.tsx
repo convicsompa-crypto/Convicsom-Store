@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Heart, MessageCircle } from 'lucide-react'
 import { Badge, type BadgeVariant } from './Badge'
 import { PriceTag } from './PriceTag'
@@ -7,6 +8,7 @@ import { Button } from './Button'
 import { cn } from '../../lib/cn'
 
 interface ProductCardProps {
+  id: string
   name: string
   category: string
   price: number
@@ -27,6 +29,7 @@ interface ProductCardProps {
 }
 
 export function ProductCard({
+  id,
   name,
   category,
   price,
@@ -46,6 +49,7 @@ export function ProductCard({
   const [selectedColor, setSelectedColor] = useState(colors?.[0]?.name ?? '')
   const [saved, setSaved] = useState(false)
   const isList = layout === 'list'
+  const href = `/produtos/${id}`
 
   return (
     <article
@@ -63,8 +67,10 @@ export function ProductCard({
           imageGradient,
         )}
       >
+        <Link to={href} aria-label={name} className="absolute inset-0" />
+
         {badges.length > 0 && (
-          <div className="absolute left-3 top-3 flex flex-col gap-1.5">
+          <div className="pointer-events-none absolute left-3 top-3 flex flex-col gap-1.5">
             {badges.map((b) => (
               <Badge key={b} variant={b} />
             ))}
@@ -101,10 +107,10 @@ export function ProductCard({
 
       <div className={cn('flex flex-1 flex-col gap-3 p-4', isList && 'sm:flex-row sm:items-center sm:justify-between')}>
         <div className={cn('flex flex-1 flex-col gap-3', isList && 'sm:pr-4')}>
-          <div>
+          <Link to={href} className="block">
             <p className="text-xs font-medium uppercase tracking-wide text-neutral-500">{category}</p>
             <h3 className="font-display text-base font-semibold text-neutral-900">{name}</h3>
-          </div>
+          </Link>
 
           {colors && colors.length > 0 && (
             <ColorSwatchGroup options={colors} value={selectedColor} onChange={setSelectedColor} />

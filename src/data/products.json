@@ -15,7 +15,26 @@
       { "name": "Branco", "hex": "#f5f5f0" }
     ],
     "imageGradient": "from-amber-100 to-amber-200",
-    "numStrings": 6
+    "numStrings": 6,
+    "images": ["from-amber-100 to-amber-200", "from-amber-200 to-amber-300", "from-amber-50 to-amber-200", "from-orange-100 to-amber-200"],
+    "summary": "Guitarra elétrica versátil com captação HSS (humbucker + single + single), corpo em tília e braço em maple. Ideal para quem transita entre estilos limpos e distorcidos, do worship ao rock.",
+    "characteristics": [
+      "Captação HSS para timbres versáteis",
+      "Braço em maple com escala em pau-ferro",
+      "Ponte com sistema tremolo de duas pontas",
+      "Acabamento em poliéster de alto brilho"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Tília" }, { "label": "Acabamento", "value": "Poliéster de alto brilho" }, { "label": "Formato", "value": "Stratocaster" }] },
+      { "category": "Captadores", "items": [{ "label": "Configuração", "value": "HSS (1 humbucker + 2 single coil)" }, { "label": "Posição", "value": "Ponte, centro e braço" }] },
+      { "category": "Braço", "items": [{ "label": "Material", "value": "Maple" }, { "label": "Escala", "value": "Pau-ferro, 22 trastes" }, { "label": "Comprimento de escala", "value": "25,5\"" }] },
+      { "category": "Hardware", "items": [{ "label": "Ponte", "value": "Tremolo 2 pontos" }, { "label": "Tarraxas", "value": "Selado, afinação estável" }] }
+    ],
+    "highlights": [
+      { "title": "Captação HSS", "description": "Combine humbucker e single coils para ir do limpo ao overdrive sem trocar de guitarra.", "imageGradient": "from-amber-100 to-amber-300" },
+      { "title": "Braço confortável", "description": "Perfil em C moderno facilita acordes e solos em qualquer região do braço.", "imageGradient": "from-orange-100 to-orange-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "baixo-jazz-bass-4-cordas",
@@ -30,7 +49,26 @@
       { "name": "Preto", "hex": "#1a1a1a" }
     ],
     "imageGradient": "from-orange-100 to-orange-300",
-    "numStrings": 4
+    "numStrings": 4,
+    "images": ["from-orange-100 to-orange-300", "from-orange-200 to-orange-400", "from-amber-100 to-orange-200"],
+    "summary": "Baixo 4 cordas no formato Jazz Bass, com dois captadores single coil para grave definido e presença nos médios — referência para estúdio e igreja.",
+    "characteristics": [
+      "Dois captadores single coil J-Bass",
+      "Corpo em tília leve",
+      "Braço parafusado (bolt-on) para ataque definido",
+      "Cordas em níquel de fábrica"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Tília" }, { "label": "Formato", "value": "Jazz Bass" }] },
+      { "category": "Captadores", "items": [{ "label": "Configuração", "value": "2x Single Coil (J-Bass)" }] },
+      { "category": "Braço", "items": [{ "label": "Material", "value": "Maple" }, { "label": "Escala", "value": "Pau-ferro, 20 trastes" }, { "label": "Comprimento de escala", "value": "34\"" }] },
+      { "category": "Hardware", "items": [{ "label": "Ponte", "value": "Fixa em liga metálica" }, { "label": "Tarraxas", "value": "Abertas, relação 1:20" }] }
+    ],
+    "highlights": [
+      { "title": "Grave definido", "description": "Captadores J-Bass entregam grave presente sem perder definição nos médios.", "imageGradient": "from-orange-100 to-orange-300" },
+      { "title": "Leveza no ombro", "description": "Corpo em tília reduz o peso para apresentações longas.", "imageGradient": "from-amber-100 to-orange-200" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "violao-folk-aco",
@@ -43,7 +81,24 @@
     "installments": { "count": 10, "value": 159 },
     "badges": ["sale"],
     "imageGradient": "from-yellow-100 to-yellow-200",
-    "numStrings": 6
+    "numStrings": 6,
+    "images": ["from-yellow-100 to-yellow-200", "from-yellow-200 to-yellow-300", "from-amber-50 to-yellow-200"],
+    "summary": "Violão folk com cordas de aço e corpo dreadnought, projetado para projeção sonora em apresentações acústicas e cultos.",
+    "characteristics": [
+      "Tampo em spruce maciço",
+      "Corpo dreadnought de alta projeção",
+      "Braço em mogno com escala em pau-ferro",
+      "Cordas de aço de fábrica"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Tampo", "value": "Spruce maciço" }, { "label": "Formato", "value": "Dreadnought" }, { "label": "Fundo e laterais", "value": "Mogno" }] },
+      { "category": "Braço", "items": [{ "label": "Material", "value": "Mogno" }, { "label": "Escala", "value": "Pau-ferro, 20 trastes" }] },
+      { "category": "Hardware", "items": [{ "label": "Tarraxas", "value": "Fechadas, cromadas" }, { "label": "Cordas", "value": "Aço 0,012\"" }] }
+    ],
+    "highlights": [
+      { "title": "Projeção acústica", "description": "Corpo dreadnought entrega volume e presença mesmo sem amplificação.", "imageGradient": "from-yellow-100 to-yellow-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "ukulele-concert",
@@ -55,7 +110,24 @@
     "installments": { "count": 6, "value": 81.67 },
     "badges": ["new"],
     "imageGradient": "from-lime-100 to-lime-200",
-    "numStrings": 4
+    "numStrings": 4,
+    "images": ["from-lime-100 to-lime-200", "from-lime-200 to-lime-300", "from-green-50 to-lime-200"],
+    "summary": "Ukulele concert em mogno, com timbre equilibrado e braço confortável — ótimo para iniciantes e para quem soma um instrumento leve ao repertório.",
+    "characteristics": [
+      "Corpo em mogno laminado",
+      "Tamanho concert (mais grave que o soprano)",
+      "Cordas em nylon Aquila",
+      "Trastes em latão polido"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Mogno laminado" }, { "label": "Tamanho", "value": "Concert (23\")" }] },
+      { "category": "Braço", "items": [{ "label": "Material", "value": "Mogno" }, { "label": "Trastes", "value": "18, latão polido" }] },
+      { "category": "Hardware", "items": [{ "label": "Tarraxas", "value": "Fechadas, relação 1:14" }, { "label": "Cordas", "value": "Nylon Aquila" }] }
+    ],
+    "highlights": [
+      { "title": "Leve e portátil", "description": "Cabe em qualquer mochila — companheiro ideal para levar à igreja ou aula.", "imageGradient": "from-lime-100 to-lime-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }]
   },
   {
     "id": "teclado-arranjador-61-teclas",
@@ -65,7 +137,25 @@
     "brand": "Yamaha",
     "price": 2890,
     "installments": { "count": 12, "value": 240.83 },
-    "imageGradient": "from-neutral-200 to-neutral-300"
+    "imageGradient": "from-neutral-200 to-neutral-300",
+    "images": ["from-neutral-200 to-neutral-300", "from-neutral-300 to-neutral-400", "from-zinc-100 to-neutral-300"],
+    "summary": "Teclado arranjador com 61 teclas sensíveis ao toque, centenas de timbres e ritmos — indicado para estudo, ensaios e apresentações em igrejas.",
+    "characteristics": [
+      "61 teclas sensíveis ao toque",
+      "Mais de 600 timbres e 200 ritmos",
+      "Função lição para estudo guiado",
+      "Saída de áudio e conexão USB para MIDI"
+    ],
+    "specs": [
+      { "category": "Teclado", "items": [{ "label": "Teclas", "value": "61, sensíveis ao toque" }, { "label": "Polifonia", "value": "64 vozes" }] },
+      { "category": "Sons", "items": [{ "label": "Timbres", "value": "600+" }, { "label": "Ritmos/Estilos", "value": "200+" }] },
+      { "category": "Conectividade", "items": [{ "label": "Saídas", "value": "Fone de ouvido, linha (P10)" }, { "label": "USB", "value": "USB to Host (MIDI)" }] },
+      { "category": "Alimentação", "items": [{ "label": "Fonte", "value": "Bivolt, inclusa" }, { "label": "Pilhas", "value": "6x AA (opcional)" }] }
+    ],
+    "highlights": [
+      { "title": "Função lição", "description": "Aprenda no seu ritmo com acompanhamento guiado nota a nota.", "imageGradient": "from-neutral-200 to-neutral-400" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "cajon-acustico-premium",
@@ -75,7 +165,25 @@
     "brand": "Meinl",
     "price": 890,
     "installments": { "count": 8, "value": 111.25 },
-    "imageGradient": "from-orange-100 to-orange-200"
+    "imageGradient": "from-orange-100 to-orange-200",
+    "images": ["from-orange-100 to-orange-200", "from-orange-200 to-orange-300", "from-amber-100 to-orange-200"],
+    "summary": "Cajón acústico com tampa em Bubinga e cordas internas ajustáveis para timbre de caixa — parceiro versátil para ministérios de louvor e rodas de samba.",
+    "characteristics": [
+      "Tampa em Bubinga para timbre brilhante",
+      "Cordas internas ajustáveis (efeito de caixa)",
+      "Corpo em compensado resistente",
+      "Antiderrapante na base"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Compensado de Pinus" }, { "label": "Tampo", "value": "Bubinga" }, { "label": "Dimensões", "value": "30 x 30 x 48 cm" }] },
+      { "category": "Acabamento", "items": [{ "label": "Acabamento", "value": "Verniz fosco" }] },
+      { "category": "Acessórios", "items": [{ "label": "Inclui", "value": "Bag de transporte" }] }
+    ],
+    "highlights": [
+      { "title": "Cordas ajustáveis", "description": "Regule a tensão interna para um efeito de caixa mais sutil ou mais presente.", "imageGradient": "from-orange-100 to-orange-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }],
+    "variations": [{ "name": "Tamanho", "options": ["Padrão", "Infantil"] }]
   },
   {
     "id": "trompete-bb-laqueado",
@@ -86,7 +194,25 @@
     "price": 3450,
     "installments": { "count": 12, "value": 287.5 },
     "badges": ["lastUnits"],
-    "imageGradient": "from-amber-200 to-amber-400"
+    "imageGradient": "from-amber-200 to-amber-400",
+    "images": ["from-amber-200 to-amber-400", "from-yellow-200 to-amber-300", "from-amber-100 to-amber-300"],
+    "summary": "Trompete Bb laqueado, projetado para bandas, fanfarras e orquestras de igreja — resposta ágil em toda a extensão e afinação estável.",
+    "characteristics": [
+      "Corpo em latão laqueado",
+      "3 pistos de ação rápida e silenciosa",
+      "Bocal 7C incluso",
+      "Estojo rígido para transporte"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Latão" }, { "label": "Acabamento", "value": "Laqueado dourado" }, { "label": "Afinação", "value": "Bb (Si bemol)" }] },
+      { "category": "Bocal", "items": [{ "label": "Modelo incluso", "value": "7C" }] },
+      { "category": "Acessórios", "items": [{ "label": "Inclui", "value": "Estojo rígido, flanela, graxa para pistos" }] }
+    ],
+    "highlights": [
+      { "title": "Pistos ágeis", "description": "Ação rápida e silenciosa para passagens técnicas sem ruído mecânico.", "imageGradient": "from-amber-200 to-amber-400" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }],
+    "variations": [{ "name": "Afinação", "options": ["Bb", "C"] }]
   },
   {
     "id": "mesa-de-som-digital-16-canais",
@@ -100,7 +226,27 @@
     "showWhatsapp": true,
     "imageGradient": "from-slate-200 to-slate-300",
     "connectivity": ["XLR", "USB", "Bluetooth"],
-    "use": ["Igreja", "Estúdio", "Palco"]
+    "use": ["Igreja", "Estúdio", "Palco"],
+    "images": ["from-slate-200 to-slate-300", "from-slate-300 to-slate-400", "from-slate-100 to-slate-300", "from-zinc-200 to-slate-300"],
+    "summary": "Mesa de som digital de 16 canais com efeitos integrados e conectividade USB/Bluetooth — pensada para igrejas, estúdios e eventos ao vivo.",
+    "characteristics": [
+      "16 canais com pré-amplificadores de baixo ruído",
+      "Efeitos de reverb e delay integrados",
+      "Gravação multipista via USB",
+      "App de controle remoto por Wi-Fi (adaptador opcional)"
+    ],
+    "specs": [
+      { "category": "Canais", "items": [{ "label": "Entradas", "value": "16 (12 XLR/TRS + 4 estéreo)" }, { "label": "Auxiliares", "value": "4 vias AUX" }] },
+      { "category": "Conectividade", "items": [{ "label": "USB", "value": "Gravação/reprodução multipista" }, { "label": "Bluetooth", "value": "Sim, para reprodução" }] },
+      { "category": "Efeitos", "items": [{ "label": "Processador interno", "value": "24 efeitos de reverb/delay/chorus" }] },
+      { "category": "Dimensões", "items": [{ "label": "Peso", "value": "4,8 kg" }, { "label": "Dimensões (L x P x A)", "value": "48 x 38 x 10 cm" }] }
+    ],
+    "highlights": [
+      { "title": "Gravação multipista", "description": "Grave cada canal separadamente via USB para mixagem posterior.", "imageGradient": "from-slate-200 to-slate-400" },
+      { "title": "Efeitos integrados", "description": "Reverb de igreja e delays prontos, sem precisar de processadores externos.", "imageGradient": "from-slate-100 to-slate-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }],
+    "variations": [{ "name": "Nº de canais", "options": ["12", "16", "24"] }]
   },
   {
     "id": "caixa-ativa-15-400w",
@@ -115,7 +261,26 @@
     "imageGradient": "from-neutral-300 to-neutral-400",
     "powerWatts": 400,
     "connectivity": ["XLR", "Bluetooth"],
-    "use": ["Igreja", "Palco", "Casa"]
+    "use": ["Igreja", "Palco", "Casa"],
+    "images": ["from-neutral-300 to-neutral-400", "from-zinc-300 to-zinc-400", "from-neutral-200 to-neutral-400"],
+    "summary": "Caixa acústica ativa de 15\" com 400W, indicada para reforço sonoro em igrejas, palcos e eventos — resposta de frequência ampla e proteção térmica integrada.",
+    "characteristics": [
+      "Alto-falante de 15\" com bobina de alta potência",
+      "Amplificação Classe D de 400W",
+      "Proteção térmica e de sobrecarga",
+      "Entrada Bluetooth para reprodução direta"
+    ],
+    "specs": [
+      { "category": "Potência", "items": [{ "label": "Potência RMS", "value": "400W" }, { "label": "Amplificação", "value": "Classe D" }] },
+      { "category": "Impedância", "items": [{ "label": "Impedância nominal", "value": "8Ω" }] },
+      { "category": "Conectividade", "items": [{ "label": "Entradas", "value": "2x XLR/TRS combo" }, { "label": "Bluetooth", "value": "Sim" }] },
+      { "category": "Dimensões", "items": [{ "label": "Peso", "value": "14,2 kg" }, { "label": "Dimensões (L x P x A)", "value": "45 x 38 x 68 cm" }] }
+    ],
+    "highlights": [
+      { "title": "Proteção térmica", "description": "Circuito de proteção evita danos em uso contínuo durante cultos e eventos longos.", "imageGradient": "from-neutral-300 to-neutral-400" },
+      { "title": "Bluetooth integrado", "description": "Toque playlists direto do celular sem cabos extras.", "imageGradient": "from-zinc-200 to-zinc-400" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "caixa-ativa-12-250w",
@@ -129,7 +294,25 @@
     "imageGradient": "from-neutral-200 to-neutral-400",
     "powerWatts": 250,
     "connectivity": ["Bluetooth", "TRS"],
-    "use": ["Casa", "Estúdio"]
+    "use": ["Casa", "Estúdio"],
+    "images": ["from-neutral-200 to-neutral-400", "from-zinc-200 to-zinc-300", "from-neutral-100 to-neutral-300"],
+    "summary": "Caixa ativa compacta de 12\" e 250W, equilíbrio entre potência e portabilidade — ideal para estúdios, salas de ensaio e eventos menores.",
+    "characteristics": [
+      "Alto-falante de 12\" leve e compacto",
+      "Amplificação Classe D de 250W",
+      "Entrada Bluetooth e TRS combinadas",
+      "Alça reforçada para transporte"
+    ],
+    "specs": [
+      { "category": "Potência", "items": [{ "label": "Potência RMS", "value": "250W" }, { "label": "Amplificação", "value": "Classe D" }] },
+      { "category": "Impedância", "items": [{ "label": "Impedância nominal", "value": "8Ω" }] },
+      { "category": "Conectividade", "items": [{ "label": "Entradas", "value": "1x TRS combo" }, { "label": "Bluetooth", "value": "Sim" }] },
+      { "category": "Dimensões", "items": [{ "label": "Peso", "value": "9,8 kg" }, { "label": "Dimensões (L x P x A)", "value": "36 x 32 x 56 cm" }] }
+    ],
+    "highlights": [
+      { "title": "Compacta e leve", "description": "Menos de 10kg — fácil de transportar entre estúdio e apresentações.", "imageGradient": "from-neutral-200 to-neutral-400" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "microfone-dinamico-vocal",
@@ -142,7 +325,25 @@
     "showWhatsapp": true,
     "imageGradient": "from-zinc-300 to-zinc-400",
     "connectivity": ["XLR"],
-    "use": ["Igreja", "Estúdio", "Palco"]
+    "use": ["Igreja", "Estúdio", "Palco"],
+    "images": ["from-zinc-300 to-zinc-400", "from-zinc-200 to-zinc-300", "from-neutral-300 to-zinc-400"],
+    "summary": "Microfone dinâmico vocal com padrão polar cardioide, projetado para rejeitar ruído de fundo e destacar a voz em igrejas, palcos e estúdios.",
+    "characteristics": [
+      "Cápsula dinâmica de alta sensibilidade",
+      "Padrão polar cardioide (rejeita ruído lateral)",
+      "Grade anti-pop integrada",
+      "Cabo XLR de 5m incluso"
+    ],
+    "specs": [
+      { "category": "Tipo", "items": [{ "label": "Transdutor", "value": "Dinâmico" }] },
+      { "category": "Padrão Polar", "items": [{ "label": "Captação", "value": "Cardioide" }] },
+      { "category": "Resposta de Frequência", "items": [{ "label": "Faixa", "value": "50Hz – 15kHz" }] },
+      { "category": "Conectividade", "items": [{ "label": "Saída", "value": "XLR balanceado" }, { "label": "Cabo incluso", "value": "5m" }] }
+    ],
+    "highlights": [
+      { "title": "Rejeição de ruído", "description": "Padrão cardioide isola a voz mesmo em ambientes com reforço sonoro potente.", "imageGradient": "from-zinc-300 to-zinc-400" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
   },
   {
     "id": "cabo-xlr-balanceado-5m",
@@ -154,6 +355,23 @@
     "installments": { "count": 3, "value": 26.33 },
     "imageGradient": "from-stone-200 to-stone-300",
     "connectivity": ["XLR"],
-    "use": ["Igreja", "Estúdio", "Palco", "Casa"]
+    "use": ["Igreja", "Estúdio", "Palco", "Casa"],
+    "images": ["from-stone-200 to-stone-300", "from-stone-300 to-stone-400", "from-neutral-200 to-stone-300"],
+    "summary": "Cabo XLR balanceado, com conectores banhados a ouro e blindagem dupla — reduz ruído e interferência em instalações de igrejas e estúdios.",
+    "characteristics": [
+      "Condutores em cobre OFC",
+      "Blindagem dupla (malha + folha)",
+      "Conectores banhados a ouro",
+      "Trava de segurança nos conectores"
+    ],
+    "specs": [
+      { "category": "Conectividade", "items": [{ "label": "Conectores", "value": "XLR macho/fêmea" }, { "label": "Acabamento", "value": "Banhado a ouro" }] },
+      { "category": "Dimensões", "items": [{ "label": "Comprimento", "value": "5m" }, { "label": "Diâmetro do cabo", "value": "6mm" }] }
+    ],
+    "highlights": [
+      { "title": "Baixa interferência", "description": "Blindagem dupla reduz ruído em instalações com muitos cabos próximos.", "imageGradient": "from-stone-200 to-stone-300" }
+    ],
+    "downloads": [{ "label": "Certificado de garantia (PDF)" }],
+    "variations": [{ "name": "Comprimento", "options": ["3m", "5m", "10m"] }]
   }
 ]

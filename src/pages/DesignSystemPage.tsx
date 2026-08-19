@@ -224,6 +224,7 @@ export function DesignSystemPage() {
 
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <ProductCard
+              id="guitarra-stratocaster-hss"
               name="Guitarra Stratocaster HSS"
               category="Cordas"
               price={4299}
@@ -238,6 +239,7 @@ export function DesignSystemPage() {
               imageGradient="from-amber-100 to-amber-200"
             />
             <ProductCard
+              id="mesa-de-som-digital-16-canais"
               name="Mesa de Som Digital 16 Canais"
               category="Áudio Profissional"
               price={6890}
@@ -247,6 +249,7 @@ export function DesignSystemPage() {
               imageGradient="from-slate-200 to-slate-300"
             />
             <ProductCard
+              id="caixa-ativa-15-400w"
               name="Caixa Ativa 15&quot; 400W"
               category="Áudio Profissional"
               price={2350}
