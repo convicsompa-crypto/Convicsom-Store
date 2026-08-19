@@ -4,6 +4,8 @@ import { Menu, ShoppingBag, Store, User, X } from 'lucide-react'
 import { Container } from '../ui/Container'
 import { Logo } from '../ui/Logo'
 import { SearchBar } from '../ui/SearchBar'
+import { CartDrawer } from '../cart/CartDrawer'
+import { useCart } from '../../context/CartContext'
 import { cn } from '../../lib/cn'
 
 const institutionalLinks = [
@@ -28,6 +30,7 @@ const categoryLinks = [
 export function Header() {
   const [promoIndex, setPromoIndex] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { itemCount, openDrawer } = useCart()
 
   useEffect(() => {
     const id = setInterval(() => setPromoIndex((i) => (i + 1) % promoMessages.length), 4000)
@@ -35,6 +38,7 @@ export function Header() {
   }, [])
 
   return (
+    <>
     <header className="sticky top-0 z-50">
       {/* Camada 1 — barra institucional escura */}
       <div className="hidden bg-brand-900 text-neutral-200 sm:block">
@@ -90,10 +94,16 @@ export function Header() {
             </button>
             <button
               type="button"
-              aria-label="Carrinho de compras"
-              className="flex size-11 items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100"
+              aria-label={`Carrinho de compras${itemCount > 0 ? `, ${itemCount} item(ns)` : ''}`}
+              onClick={openDrawer}
+              className="relative flex size-11 items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100"
             >
               <ShoppingBag className="size-5" aria-hidden="true" />
+              {itemCount > 0 && (
+                <span className="absolute right-1.5 top-1.5 flex size-4 items-center justify-center rounded-full bg-danger-500 text-[10px] font-bold text-white">
+                  {itemCount > 9 ? '9+' : itemCount}
+                </span>
+              )}
             </button>
           </div>
         </Container>
@@ -133,5 +143,7 @@ export function Header() {
         </Container>
       </nav>
     </header>
+    <CartDrawer />
+    </>
   )
 }

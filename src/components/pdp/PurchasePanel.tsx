@@ -5,7 +5,9 @@ import { Button } from '../ui/Button'
 import { PriceTag } from '../ui/PriceTag'
 import { ColorSwatchGroup } from '../ui/ColorSwatch'
 import { Accordion, AccordionItem } from '../ui/Accordion'
+import { QuantityStepper } from '../ui/QuantityStepper'
 import { VariationSelector } from './VariationSelector'
+import { useCart } from '../../context/CartContext'
 import type { Product } from '../../types/product'
 
 export function PurchasePanel({ product }: { product: Product }) {
@@ -13,6 +15,24 @@ export function PurchasePanel({ product }: { product: Product }) {
   const [selectedVariations, setSelectedVariations] = useState<Record<string, string>>(() =>
     Object.fromEntries((product.variations ?? []).map((v) => [v.name, v.options[0]])),
   )
+  const [quantity, setQuantity] = useState(1)
+  const { addItem, openDrawer } = useCart()
+
+  const variantLabel = [selectedColor, ...Object.values(selectedVariations)].filter(Boolean).join(' · ') || undefined
+
+  const handleAddToCart = () => {
+    addItem(
+      {
+        productId: product.id,
+        name: product.name,
+        price: product.price,
+        imageGradient: product.imageGradient,
+        variantLabel,
+      },
+      quantity,
+    )
+    openDrawer()
+  }
 
   return (
     <div className="flex flex-col gap-5">
@@ -44,8 +64,15 @@ export function PurchasePanel({ product }: { product: Product }) {
         />
       ))}
 
+      <div>
+        <p className="mb-2 text-sm font-medium text-neutral-800">Quantidade</p>
+        <QuantityStepper value={quantity} onChange={setQuantity} label={product.name} />
+      </div>
+
       <div className="flex flex-col gap-2.5">
-        <Button size="lg">Adicionar ao carrinho</Button>
+        <Button size="lg" onClick={handleAddToCart}>
+          Adicionar ao carrinho
+        </Button>
         {product.showWhatsapp && (
           <Button size="lg" variant="whatsapp" leftIcon={<MessageCircle className="size-4" aria-hidden="true" />}>
             Falar no WhatsApp
