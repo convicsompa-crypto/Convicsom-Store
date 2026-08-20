@@ -382,7 +382,7 @@ export function DesignSystemPage() {
               <span className="font-semibold text-accent-500">12x sem juros em todo o site</span>
             </div>
             <div className="flex items-center gap-4 bg-white px-4 py-3">
-              <Logo crop className="h-9" />
+              <Logo className="h-12" />
               <div className="flex flex-1 items-center gap-2 rounded-full bg-neutral-100 px-4 py-2 text-neutral-400">
                 <Search className="size-4" aria-hidden="true" />
                 <span className="text-sm">Buscar instrumentos, áudio profissional...</span>
