@@ -70,7 +70,7 @@ export function Header() {
           </button>
 
           <Link to="/" className="shrink-0">
-            <Logo className="h-8 sm:h-10" />
+            <Logo crop className="h-6 sm:h-10" />
           </Link>
 
           <div className="hidden flex-1 sm:block">
