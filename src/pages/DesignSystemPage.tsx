@@ -13,6 +13,7 @@ import { Input } from '../components/ui/Input'
 import { Skeleton } from '../components/ui/Skeleton'
 import { Accordion, AccordionItem } from '../components/ui/Accordion'
 import { ProductCard } from '../components/ui/ProductCard'
+import { EditorialCard } from '../components/ui/EditorialCard'
 import { StateBlock } from '../components/ui/EmptyState'
 import { PriceTag } from '../components/ui/PriceTag'
 import { Logo } from '../components/ui/Logo'
@@ -278,9 +279,48 @@ export function DesignSystemPage() {
           </div>
         </section>
 
+        {/* EDITORIAL CARD */}
+        <section id="editorial-card">
+          <h2 className="font-display text-2xl font-bold text-neutral-900">7. Card editorial</h2>
+          <p className="mt-1 max-w-2xl text-sm text-neutral-500">
+            Foto full-bleed + rótulo + título, card inteiro clicável — distinto do <code className="font-mono text-xs">ProductCard</code>,
+            que continua sendo o card de produto com preço/CTA de compra. Sem overlay/gradiente sobre a foto; a cor do
+            texto (<code className="font-mono text-xs">tone</code>) é decidida por card, conforme o contraste da imagem, nunca
+            globalmente. Cantos sempre retos. Aparece nas seções editoriais da Home em 3 proporções.
+          </p>
+
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <EditorialCard
+              to="/design-system"
+              imageGradient="from-red-100 to-red-200"
+              alt="Exemplo de card editorial quadrado"
+              eyebrow="Lançamento"
+              title="Proporção 1:1"
+              tone="light"
+              className="aspect-square"
+            />
+            <EditorialCard
+              to="/design-system"
+              imageGradient="from-slate-700 to-slate-900"
+              alt="Exemplo de card editorial largo"
+              title="Proporção 510:292"
+              tone="dark"
+              className="aspect-[510/292] sm:col-span-2"
+            />
+            <EditorialCard
+              to="/design-system"
+              imageGradient="from-yellow-100 to-amber-200"
+              alt="Exemplo de card editorial vertical pequeno"
+              title="Proporção 247:282"
+              tone="light"
+              className="aspect-[247/282]"
+            />
+          </div>
+        </section>
+
         {/* ACCORDION */}
         <section id="accordion">
-          <h2 className="font-display text-2xl font-bold text-neutral-900">7. Accordion</h2>
+          <h2 className="font-display text-2xl font-bold text-neutral-900">8. Accordion</h2>
           <p className="mt-1 max-w-2xl text-sm text-neutral-500">
             Mesmo componente para os filtros da listagem (PLP) e para os blocos de Envio/Devoluções e Especificações da
             página de produto (PDP). Baseado em <code className="font-mono text-xs">&lt;details&gt;</code> — acessível e
@@ -327,7 +367,7 @@ export function DesignSystemPage() {
 
         {/* FORM & ESTADOS */}
         <section id="estados">
-          <h2 className="font-display text-2xl font-bold text-neutral-900">8. Formulário &amp; estados</h2>
+          <h2 className="font-display text-2xl font-bold text-neutral-900">9. Formulário &amp; estados</h2>
 
           <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-6">
@@ -368,7 +408,7 @@ export function DesignSystemPage() {
 
         {/* PREVIEW HEADER MINI */}
         <section id="header-preview">
-          <h2 className="font-display text-2xl font-bold text-neutral-900">9. Prévia de header (aplicação real)</h2>
+          <h2 className="font-display text-2xl font-bold text-neutral-900">10. Prévia de header (aplicação real)</h2>
           <p className="mt-1 max-w-2xl text-sm text-neutral-500">
             Amostra dos tokens aplicados em um componente real de duas camadas — validação antes de construirmos a Home.
           </p>
