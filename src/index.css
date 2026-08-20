@@ -88,16 +88,27 @@
   --color-whatsapp-700: #128c43;
 }
 
-body {
-  background-color: var(--color-neutral-50);
-  color: var(--color-neutral-900);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-}
+/*
+  body/:focus-visible ficam dentro de @layer base: no Tailwind v4, regras
+  fora de qualquer @layer têm prioridade sobre TODAS as camadas (inclusive
+  @layer utilities), não importa a especificidade — então um componente
+  nunca conseguiria sobrescrever :focus-visible com classes utilitárias
+  como focus:outline-none. Dentro de @layer base, o anel de foco continua
+  o padrão em qualquer lugar, mas um componente específico pode optar por
+  outro indicador de foco (ex.: mudança de cor de borda) normalmente.
+*/
+@layer base {
+  body {
+    background-color: var(--color-neutral-50);
+    color: var(--color-neutral-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* Foco visível consistente (WCAG AA) em qualquer elemento interativo,
-   inclusive os que usam :focus-visible nativamente e os que não usam. */
-:focus-visible {
-  outline: 2px solid var(--color-brand-500);
-  outline-offset: 2px;
+  /* Foco visível consistente (WCAG AA) em qualquer elemento interativo,
+     inclusive os que usam :focus-visible nativamente e os que não usam. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
 }

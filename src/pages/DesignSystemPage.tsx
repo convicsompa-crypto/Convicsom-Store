@@ -15,6 +15,7 @@ import { Accordion, AccordionItem } from '../components/ui/Accordion'
 import { ProductCard } from '../components/ui/ProductCard'
 import { StateBlock } from '../components/ui/EmptyState'
 import { PriceTag } from '../components/ui/PriceTag'
+import { Logo } from '../components/ui/Logo'
 import { Link } from 'react-router-dom'
 import logoConvicsom from '../assets/logo-convicsom.png'
 
@@ -381,8 +382,8 @@ export function DesignSystemPage() {
               <span className="font-semibold text-accent-500">12x sem juros em todo o site</span>
             </div>
             <div className="flex items-center gap-4 bg-white px-4 py-3">
-              <img src={logoConvicsom} alt="Convicsom" className="h-9 w-auto" />
-              <div className="flex flex-1 items-center gap-2 rounded-md border border-neutral-300 px-3 py-2 text-neutral-400">
+              <Logo crop className="h-9" />
+              <div className="flex flex-1 items-center gap-2 rounded-full bg-neutral-100 px-4 py-2 text-neutral-400">
                 <Search className="size-4" aria-hidden="true" />
                 <span className="text-sm">Buscar instrumentos, áudio profissional...</span>
               </div>
