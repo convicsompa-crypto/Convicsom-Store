@@ -42,7 +42,7 @@ export function Header() {
     <header className="sticky top-0 z-50">
       {/* Camada 1 — barra institucional escura */}
       <div className="hidden bg-brand-900 text-neutral-200 sm:block">
-        <Container className="flex h-9 items-center justify-between text-xs">
+        <Container className="flex h-9 items-center justify-between text-xs lg:px-[72px]">
           <nav aria-label="Institucional" className="flex items-center gap-5">
             {institutionalLinks.map((l) => (
               <a key={l.label} href={l.href} className="hover:text-accent-400">
@@ -56,9 +56,11 @@ export function Header() {
         </Container>
       </div>
 
-      {/* Camada 2 — header branco fixo */}
-      <div className="border-b border-neutral-200 bg-white">
-        <Container className="flex h-16 items-center gap-4 sm:gap-6">
+      {/* Camada 2 — header branco fixo. Sem borda inferior aqui: junto com a
+          camada 3, forma um único bloco branco contínuo (como no Fender),
+          a borda de separação do header fica só no final da camada 3. */}
+      <div className="bg-white">
+        <Container className="flex h-18 items-center gap-4 sm:gap-6 lg:px-[72px]">
           <button
             type="button"
             className="flex size-11 shrink-0 items-center justify-center rounded-md text-neutral-700 hover:bg-neutral-100 sm:hidden"
@@ -122,13 +124,13 @@ export function Header() {
           mobileOpen ? 'block' : 'hidden',
         )}
       >
-        <Container className="flex flex-col gap-1 py-2 sm:h-12 sm:flex-row sm:items-center sm:justify-between sm:py-0">
-          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-6">
+        <Container className="flex flex-col gap-1 py-2 sm:h-[50px] sm:flex-row sm:items-center sm:justify-between sm:py-0 lg:px-[72px]">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center">
             {categoryLinks.map((l) => (
               <Link
                 key={l.label}
                 to={l.to}
-                className="rounded-md px-2 py-2.5 text-sm font-medium text-neutral-700 hover:text-brand-700 sm:px-0 sm:py-0"
+                className="rounded-md px-2 py-2.5 text-xs font-semibold text-neutral-800 hover:text-brand-700 sm:px-2.5 sm:py-0"
               >
                 {l.label}
               </Link>
