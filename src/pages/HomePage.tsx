@@ -5,6 +5,9 @@ import { FeaturedProducts } from '../components/home/FeaturedProducts'
 import { CategoryBannerGrid } from '../components/home/CategoryBannerGrid'
 import { CampaignBanner } from '../components/home/CampaignBanner'
 import { InstitutionalSection } from '../components/home/InstitutionalSection'
+import { BrandBanner } from '../components/home/BrandBanner'
+import { LaunchGrid } from '../components/home/LaunchGrid'
+import { CategoryBento } from '../components/home/CategoryBento'
 
 export function HomePage() {
   return (
@@ -16,6 +19,9 @@ export function HomePage() {
         <CategoryBannerGrid />
         <CampaignBanner />
         <InstitutionalSection />
+        <BrandBanner />
+        <LaunchGrid />
+        <CategoryBento />
       </main>
       <Footer />
     </div>

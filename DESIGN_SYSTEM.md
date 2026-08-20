@@ -107,21 +107,35 @@ Estados: `hover`, `active`, `disabled` (opacidade reduzida + `cursor-not-allowed
   marca, sem preço, CTA `quote` — para nunca competir visualmente com os
   cards de produto do varejo.
 
-## 7. Accordion
+## 7. Card editorial
+
+`EditorialCard` (`src/components/ui/EditorialCard.tsx`) — foto full-bleed +
+rótulo + título, card inteiro clicável (`Link`, sem botão interno). Distinto
+do `ProductCard`: não tem preço nem CTA, é usado nas seções editoriais da
+Home (banner de marca, lançamentos, categorias em bento). Sem
+overlay/gradiente escuro sobre a imagem — a cor do texto (`tone`: `'light'`
+ou `'dark'`) é decidida por card, conforme o contraste da própria foto, nunca
+globalmente. Cantos sempre retos (`rounded-none`, nunca arredondado).
+Reaproveitado em 3 proporções (1:1, 510:292, 247:282) nas seções 2 e 3 da
+Home — ver `SPEChomesections.md`. Hoje usa `imageGradient` (mesmo placeholder
+de gradiente do catálogo) em vez de foto real, já que nenhum asset de imagem
+existe ainda no projeto além da logo.
+
+## 8. Accordion
 
 Um único componente (`Accordion` / `AccordionItem`) reaproveitado em dois
 contextos: filtros da PLP e blocos de Envio/Devoluções + Especificações da
 PDP. Implementado com `<details>/<summary>` nativo — acessível e navegável
 por teclado sem JavaScript extra; ícone chevron gira via `group-open:`.
 
-## 8. Estados visuais
+## 9. Estados visuais
 
 `hover`/`active`/`disabled` em botões e inputs; `focus-visible` com anel de 2px
 na cor de marca em todo elemento interativo; `Skeleton` (pulse) para loading;
 `StateBlock` reaproveitado para vazio ("Nenhum resultado encontrado") e erro
 ("Não foi possível carregar"), cada um com ação de recuperação.
 
-## 9. Navegação B2C / B2B
+## 10. Navegação B2C / B2B
 
 - Menu principal: item de destaque separado ("Projetos para Igrejas e
   Empresas"), visualmente diferenciado das categorias de produto — leva a
@@ -130,19 +144,21 @@ na cor de marca em todo elemento interativo; `Skeleton` (pulse) para loading;
   ao carrinho".
 - Card institucional na Home fica separado do grid de produtos (ver seção 6).
 
-## 10. Inventário de componentes (atomic design)
+## 11. Inventário de componentes (atomic design)
 
 **Construídos** (`src/components/ui/`, `src/components/layout/`, `src/components/home/`):
 
 - Átomos: `Button` (+ variante `accent` para CTA sobre fundo escuro), `Badge`,
   `Input`, `Skeleton`, `Logo`
 - Moléculas: `PriceTag`, `ColorSwatchGroup`, `Accordion`/`AccordionItem`,
-  `StateBlock` (vazio/erro), `Container`, `SearchBar`
+  `StateBlock` (vazio/erro), `Container`, `SearchBar`, `EditorialCard`
 - Organismos: `ProductCard`, `Header` (TopBar com aviso rotativo + MainHeader +
   Nav + menu hambúrguer mobile), `Footer` (selos de confiança + colunas +
   link "Sou empresa/igreja"), `HeroBanner`, `FeaturedProducts` (grid de 4),
   `CategoryBannerGrid` (grid de 3), `CampaignBanner` (full-width),
-  `InstitutionalSection` (bloco B2B "Projetos para Igrejas e Empresas")
+  `InstitutionalSection` (bloco B2B "Projetos para Igrejas e Empresas"),
+  `BrandBanner` (Makpro, full-bleed), `LaunchGrid` (2 `EditorialCard`
+  quadrados), `CategoryBento` (4 `EditorialCard` em grade assimétrica)
 - Páginas: `HomePage` (rota `/`), `DesignSystemPage` (rota `/design-system`)
 - Dados mockados: `src/data/products.ts`
 
@@ -155,7 +171,7 @@ na cor de marca em todo elemento interativo; `Skeleton` (pulse) para loading;
   (sticky), `SpecTable`, `CompareTable`, `TestimonialCard`, `PLPToolbar`
 - Templates: `PLPLayout`, `PDPLayout`, `InstitutionalLayout`
 
-## 11. Acessibilidade (WCAG AA)
+## 12. Acessibilidade (WCAG AA)
 
 - Contraste verificado nas combinações texto/fundo usadas (500–700 da marca
   para texto sobre branco; 50–100 para fundos com texto escuro).

@@ -373,5 +373,74 @@
     ],
     "downloads": [{ "label": "Certificado de garantia (PDF)" }],
     "variations": [{ "name": "Comprimento", "options": ["3m", "5m", "10m"] }]
+  },
+  {
+    "id": "contrabaixo-waldman-pj",
+    "name": "Contrabaixo Waldman PJ 4 Cordas",
+    "category": "Instrumentos",
+    "subcategory": "Cordas",
+    "brand": "Waldman",
+    "price": 1890,
+    "installments": { "count": 12, "value": 157.5 },
+    "badges": ["new"],
+    "colors": [
+      { "name": "Sunburst", "hex": "#8a4b1f" },
+      { "name": "Preto", "hex": "#1a1a1a" },
+      { "name": "Vermelho", "hex": "#7a1f1f" }
+    ],
+    "imageGradient": "from-red-100 to-red-200",
+    "numStrings": 4,
+    "images": ["from-red-100 to-red-200", "from-red-200 to-red-300", "from-orange-100 to-red-200"],
+    "summary": "Contrabaixo 4 cordas com configuração PJ (Precision + Jazz), corpo em tília e braço parafusado — grave presente com boa definição para culto e estúdio, com ótimo custo-benefício.",
+    "characteristics": [
+      "Captação PJ (Precision + Jazz) para timbres versáteis",
+      "Corpo em tília leve",
+      "Braço parafusado (bolt-on) em maple",
+      "Ponte fixa em liga metálica"
+    ],
+    "specs": [
+      { "category": "Corpo", "items": [{ "label": "Material", "value": "Tília" }, { "label": "Formato", "value": "PJ" }] },
+      { "category": "Captadores", "items": [{ "label": "Configuração", "value": "PJ (1 Precision + 1 Jazz)" }] },
+      { "category": "Braço", "items": [{ "label": "Material", "value": "Maple" }, { "label": "Escala", "value": "Pau-ferro, 20 trastes" }, { "label": "Comprimento de escala", "value": "34\"" }] },
+      { "category": "Hardware", "items": [{ "label": "Ponte", "value": "Fixa em liga metálica" }, { "label": "Tarraxas", "value": "Abertas, relação 1:18" }] }
+    ],
+    "highlights": [
+      { "title": "Captação PJ", "description": "Combine o grave definido do Precision com a versatilidade do Jazz em um único instrumento.", "imageGradient": "from-red-100 to-red-300" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }]
+  },
+  {
+    "id": "mesa-behringer-wing",
+    "name": "Mesa Digital Behringer WING",
+    "category": "Áudio Profissional",
+    "subcategory": "Mesas de Som",
+    "brand": "Behringer",
+    "price": 32900,
+    "installments": { "count": 12, "value": 2741.67 },
+    "badges": ["new"],
+    "showWhatsapp": true,
+    "imageGradient": "from-slate-700 to-slate-900",
+    "connectivity": ["XLR", "USB", "Dante", "Wi-Fi"],
+    "use": ["Igreja", "Estúdio", "Palco"],
+    "images": ["from-slate-700 to-slate-900", "from-slate-600 to-slate-800", "from-zinc-700 to-slate-900", "from-slate-800 to-neutral-900"],
+    "summary": "Mesa digital de grande formato com tela touchscreen de 10\", 48 canais totalmente motorizados e roteamento via Dante — referência para igrejas de grande porte e produções ao vivo.",
+    "characteristics": [
+      "Tela touchscreen capacitiva de 10\" com interface por canal",
+      "48 canais de entrada com processamento total (EQ, dinâmica, efeitos)",
+      "Rede de áudio Dante nativa para expansão de I/O",
+      "Controle remoto via app Wi-Fi (iPad/Android)"
+    ],
+    "specs": [
+      { "category": "Canais", "items": [{ "label": "Entradas", "value": "48 canais totalmente processados" }, { "label": "Auxiliares", "value": "24 barramentos configuráveis" }] },
+      { "category": "Conectividade", "items": [{ "label": "Rede", "value": "Dante, AES50" }, { "label": "USB", "value": "Gravação/reprodução multipista, 48 canais" }, { "label": "Wi-Fi", "value": "Controle remoto via app" }] },
+      { "category": "Efeitos", "items": [{ "label": "Processador interno", "value": "Até 16 racks de efeitos simultâneos" }] },
+      { "category": "Dimensões", "items": [{ "label": "Peso", "value": "10,8 kg" }, { "label": "Dimensões (L x P x A)", "value": "58 x 43 x 15 cm" }] }
+    ],
+    "highlights": [
+      { "title": "Tela touchscreen", "description": "Acesso direto a cada canal na tela de 10\", sem navegar por menus profundos durante o culto.", "imageGradient": "from-slate-600 to-slate-800" },
+      { "title": "Pronta para Dante", "description": "Expanda a mesa com stageboxes em rede, sem multicabos analógicos.", "imageGradient": "from-zinc-700 to-slate-900" }
+    ],
+    "downloads": [{ "label": "Manual do usuário (PDF)" }, { "label": "Certificado de garantia (PDF)" }],
+    "variations": [{ "name": "Formato", "options": ["Compact", "Full"] }]
   }
 ]
